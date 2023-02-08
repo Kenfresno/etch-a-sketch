@@ -1,0 +1,24 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color:azure;
+    background-color: #202020;
+}
+.container {
+    display:flex;
+    flex-direction: row;
+}
+.box {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boxTwo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
