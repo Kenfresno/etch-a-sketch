@@ -1,6 +1,26 @@
+body {
+    background-color: #909090;
+}
+.flex-container, .buttons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    margin: 10px;
+}
+.buttons {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.settings {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .board {
     width: 500px;
     height: 500px;
     display:grid;
 }
-.
+

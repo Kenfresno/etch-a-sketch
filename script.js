@@ -1,5 +1,9 @@
 let color = "black";
 function populateBoard(size) {
+    if (size > 100 ) { 
+        alert("Don't increase size above 100.");
+        return ;
+    }
     let board = document.querySelector(".board");
     board.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
     board.style.gridTemplateRows = `repeat(${size} , 1fr)`;
@@ -18,7 +22,6 @@ function changeSize(value){
 }
 function changeColor(value){
     color = value;
-
 }
 function colorBox(){
     this.style.backgroundColor = color;
