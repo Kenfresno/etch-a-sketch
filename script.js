@@ -1,20 +1,12 @@
-const body = document.querySelector("body");
-const container = document.createElement("div");
-container.classList.add("container")
+function populateBoard(size) {
+        let board = document.querySelector(".board");
+    board.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
+    board.style.gridTemplateRows = `repeat(${size} , 1fr)`;
 
-
-for (let i = 1; i <= 16; i++){
-    const div = document.createElement("div");
-    div.classList.add("box");
-    div.id = i;
-    div.textContent = i;
-    container.appendChild(div);
-    for (let j = 1; j <= 16; j++) {
-        const childDiv = document.createElement("div");
-        childDiv.classList.add("boxTwo");
-        childDiv.id = j;
-        childDiv.textContent = j;
-        div.appendChild(childDiv);
+    for (i = 0; i < 256; i++) {
+        let box = document.createElement("div");
+        box.style.backgroundColor = "coral";
+        board.insertAdjacentElement("beforeend", box);
     }
 }
-body.appendChild(container);
+populateBoard(3);
