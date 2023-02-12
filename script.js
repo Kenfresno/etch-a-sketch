@@ -1,12 +1,21 @@
 function populateBoard(size) {
-        let board = document.querySelector(".board");
+    let board = document.querySelector(".board");
     board.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
     board.style.gridTemplateRows = `repeat(${size} , 1fr)`;
-
-    for (i = 0; i < 256; i++) {
+    let amount = size * size;
+    for (i = 0; i < amount; i++) {
         let box = document.createElement("div");
+        box.addEventListener("mouseover", changeColor);
         box.style.backgroundColor = "coral";
         board.insertAdjacentElement("beforeend", box);
     }
 }
-populateBoard(3);
+populateBoard(16);
+
+function changeSize(value){
+    populateBoard(value);
+}
+
+function changeColor(){
+    this.style.backgroundColor = "black";
+}
